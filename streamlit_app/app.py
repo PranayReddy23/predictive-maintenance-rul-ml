@@ -72,11 +72,15 @@ st.markdown("""
 # =========================================================
 # File Paths
 # =========================================================
-MODEL_PATH = Path("D:\ML Assignment\streamlit_app\best_rf.pkl")
-COLUMNS_PATH = Path("D:\ML Assignment\streamlit_app\cap_limits.pkl")
-CAP_LIMITS_PATH = Path("D:\ML Assignment\streamlit_app\category_values.pkl")
-CATEGORY_VALUES_PATH = Path("D:\ML Assignment\streamlit_app\input_ranges.pkl")
-INPUT_RANGES_PATH = Path("D:\ML Assignment\streamlit_app\model_columns.pkl")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "best_rf.pkl"
+COLUMNS_PATH = BASE_DIR / "model_columns.pkl"
+CAP_LIMITS_PATH = BASE_DIR / "cap_limits.pkl"
+CATEGORY_VALUES_PATH = BASE_DIR / "category_values.pkl"
+INPUT_RANGES_PATH = BASE_DIR / "input_ranges.pkl"
 
 # =========================================================
 # Helpers
